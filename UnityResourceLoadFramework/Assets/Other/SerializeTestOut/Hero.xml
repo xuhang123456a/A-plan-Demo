@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Hero xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="1" Name="牛头" Lv="0" Hp="1000" Mp="100">
+  <Equip>1</Equip>
+  <Equip>2</Equip>
+  <Equip>3</Equip>
+  <Equip>4</Equip>
+</Hero>

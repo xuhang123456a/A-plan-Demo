@@ -6,5 +6,6 @@ public class TestSerilize
 {
     [XmlAttribute("Id")] public int id;
     [XmlAttribute("Name")] public string name;
-    [XmlArray] public List<int> list;
+    [XmlArray("list")] public List<int> list;
+    [XmlAttribute("price")] public int price;
 }

@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TestSerilize xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="1" Name="asf">
-  <List>
-    <int>2</int>
-    <int>3</int>
-    <int>4</int>
-    <int>8</int>
-  </List>
-</TestSerilize>

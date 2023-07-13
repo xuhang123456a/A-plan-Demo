@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72a6213ef5b38bf4cb227d18bcb1e6e1, type: 3}
-  m_Name: test
+  m_Name: Hero
   m_EditorClassIdentifier: 
-  id: 1
-  sName: 46414
-  list:
-  - "\u8428\u82AC"
-  - "\u8212\u670D"
-  - "\u975E\u5B98\u65B9"
-  - "\u53D1\u7684\u5427"
+  id: 0
+  name: 
+  lv: 0
+  hp: 0
+  mp: 0
+  equip: []
