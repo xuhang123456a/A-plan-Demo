@@ -3,7 +3,6 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Xml.Serialization;
-using Other;
 using UnityEditor;
 using UnityEngine;
 using Utils;
@@ -15,6 +14,7 @@ public class Test : MonoBehaviour
         // XmlSerializeTest();
         // BinarySerializeTest();
         // UseUnityAssetSerialize();
+        
     }
 
     #region XML序列化
@@ -88,12 +88,13 @@ public class Test : MonoBehaviour
 
     private TestSerilize BinaryDeserialize()
     {
-        TextAsset textAsset = AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/Other/test.bytes");
-        MemoryStream ms = new MemoryStream(textAsset.bytes);
-        BinaryFormatter bf = new BinaryFormatter();
-        TestSerilize testSerilize = (TestSerilize)bf.Deserialize(ms);
-        ms.Close();
-        return testSerilize;
+        // TextAsset textAsset = AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/Other/test.bytes");
+        // MemoryStream ms = new MemoryStream(textAsset.bytes);
+        // BinaryFormatter bf = new BinaryFormatter();
+        // TestSerilize testSerilize = (TestSerilize)bf.Deserialize(ms);
+        // ms.Close();
+        // return testSerilize;
+        return null;
     }
 
     private void UseBinaryDeserialize()
@@ -112,12 +113,12 @@ public class Test : MonoBehaviour
 
     public void UseUnityAssetSerialize()
     {
-        AssetSerialize assetSerialize = AssetDatabase.LoadAssetAtPath<AssetSerialize>("Assets/Other/test.asset");
-        Debug.Log($"{assetSerialize.id},{assetSerialize.sName}");
-        foreach (var item in assetSerialize.list)
-        {
-            Debug.Log(item);
-        }
+        // AssetSerialize assetSerialize = AssetDatabase.LoadAssetAtPath<AssetSerialize>("Assets/Other/test.asset");
+        // Debug.Log($"{assetSerialize.id},{assetSerialize.sName}");
+        // foreach (var item in assetSerialize.list)
+        // {
+        //     Debug.Log(item);
+        // }
     }
 
     #endregion

@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 1876224402
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: attack
+      Dependencies: {}
+    Info_1:
+      Name: shader
+      Dependencies: {}
+    Info_2:
+      Name: sound
+      Dependencies: {}
+    Info_3:
+      Name: benghuai-body
+      Dependencies:
+        Dependency_0: attack
+    Info_4:
+      Name: qq
+      Dependencies:
+        Dependency_0: benghuai-body
