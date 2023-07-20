@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a6213ef5b38bf4cb227d18bcb1e6e1, type: 3}
   m_Name: Hero
   m_EditorClassIdentifier: 
-  id: 0
-  name: 
-  lv: 0
-  hp: 0
-  mp: 0
-  equip: []
+  id: 3
+  name: "\u9A6C\u9762"
+  lv: 3
+  hp: 3
+  mp: 3
+  equip:
+  - 1
+  - 4214
+  - 2341
+  - 34

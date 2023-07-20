@@ -1,18 +1,20 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
-using UnityEngine;
 
-public class ObjectManager : MonoBehaviour
+public class ObjectManager : Singleton<ObjectManager>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    protected Dictionary<Type, object> m_ClassPoolDic = new Dictionary<Type, object>();
 
-    // Update is called once per frame
-    void Update()
+    public ClassObjectPool<T> GetOrCreateClassPool<T>(int maxCount ) where T:class,new()
     {
-        
+        Type t = typeof(T);
+        if (!m_ClassPoolDic.TryGetValue(t, out var outObj)|| outObj == null)
+        {
+            ClassObjectPool<T> newPool = new ClassObjectPool<T>(maxCount);
+            m_ClassPoolDic.Add(t,newPool);
+            return newPool;
+        }
+
+        return outObj as ClassObjectPool<T>;
     }
 }

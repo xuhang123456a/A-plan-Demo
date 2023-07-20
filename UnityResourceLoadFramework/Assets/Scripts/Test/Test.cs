@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Xml.Serialization;
@@ -39,8 +40,8 @@ public class Test : MonoBehaviour
         ShowHeroData(showHeroBytes);
 
         // asset序列化
-        AssetSerialize assetSerialize = AssetDeserialize();
-        ShowHeroData(assetSerialize);
+        // AssetSerialize assetSerialize = AssetDeserialize();
+        // ShowHeroData(assetSerialize);
     }
 
     private void ShowHeroData(Hero showHero)
@@ -93,29 +94,29 @@ public class Test : MonoBehaviour
 
     private Hero BinaryDeserialize()
     {
-        // FileStream fs = new FileStream(TestOutPath + "hero.bytes", FileMode.Open, FileAccess.ReadWrite, FileShare.ReadWrite);
-        // BinaryFormatter bf = new BinaryFormatter();
-        // Hero hero = (Hero)bf.Deserialize(fs);
-        // fs.Close();
-        // return hero;
-
-        TextAsset textAsset = AssetDatabase.LoadAssetAtPath<TextAsset>(TestOutPath + "Hero.bytes");
-        MemoryStream ms = new MemoryStream(textAsset.bytes);
+        FileStream fs = new FileStream(TestOutPath + "hero.bytes", FileMode.Open, FileAccess.ReadWrite, FileShare.ReadWrite);
         BinaryFormatter bf = new BinaryFormatter();
-        Hero hero = (Hero)bf.Deserialize(ms);
-        ms.Close();
+        Hero hero = (Hero)bf.Deserialize(fs);
+        fs.Close();
         return hero;
+
+        // TextAsset textAsset = AssetDatabase.LoadAssetAtPath<TextAsset>(TestOutPath + "Hero.bytes");
+        // MemoryStream ms = new MemoryStream(textAsset.bytes);
+        // BinaryFormatter bf = new BinaryFormatter();
+        // Hero hero = (Hero)bf.Deserialize(ms);
+        // ms.Close();
+        // return hero;
     }
 
     #endregion
 
     #region Asset序列化
 
-    private AssetSerialize AssetDeserialize()
-    {
-        AssetSerialize assetSerialize = AssetDatabase.LoadAssetAtPath<AssetSerialize>(TestOutPath + "Hero.asset");
-        return assetSerialize;
-    }
+    // private AssetSerialize AssetDeserialize()
+    // {
+    //     AssetSerialize assetSerialize = AssetDatabase.LoadAssetAtPath<AssetSerialize>(TestOutPath + "Hero.asset");
+    //     return assetSerialize;
+    // }
 
     #endregion
 }

@@ -6,6 +6,7 @@ namespace Editor.BundleEditor
     [CreateAssetMenu(menuName = "CreateAbConfig",fileName = "AbConfig",order = 0)]
     public class AbConfig : ScriptableObject
     {
+        //单个文件所在文件夹路径，会遍历这个文件夹下面所有prefab，所有的prefab名字不能重复，必须保证名字唯一性
         public List<string> m_AllPrefabPath = new List<string>();
         public List<FileDirABName> m_FileDirAB = new List<FileDirABName>();
 

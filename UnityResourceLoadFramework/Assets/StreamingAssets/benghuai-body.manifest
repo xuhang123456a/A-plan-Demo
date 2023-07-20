@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 50838775
+CRC: 2721876316
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 59bfde00b4cc0125f58ff62e6db16b0f
+    Hash: fb6a5a62e342008cdb66f3a36e1ebc4b
   TypeTreeHash:
     serializedVersion: 2
     Hash: fc929ae1562501ec73960ac1f8cd0097
@@ -37,3 +37,4 @@ Assets:
 - Assets/GameData/Prefabs/benghuai-body.prefab
 Dependencies:
 - D:/Study/A-plan-Demo/UnityResourceLoadFramework/Assets/StreamingAssets/attack
+- D:/Study/A-plan-Demo/UnityResourceLoadFramework/Assets/StreamingAssets/shader

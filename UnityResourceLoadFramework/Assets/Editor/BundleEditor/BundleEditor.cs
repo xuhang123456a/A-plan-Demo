@@ -14,7 +14,7 @@ namespace Editor.BundleEditor
         private static string m_BundleTargetPath = Application.streamingAssetsPath;
         private static string ABCONFIGPATH = "Assets/Editor/BundleEditor/AbConfig.asset";
 
-        //key是ab包名，value是路径
+        //key是ab包名，value是路径，所有文件夹ab包
         private static Dictionary<string, string> m_AllFileDir = new Dictionary<string, string>();
 
         //过滤的list
@@ -226,7 +226,7 @@ namespace Editor.BundleEditor
                 abBase.Path = "";
             }
 
-            string bytePath = m_BundleTargetPath + "/AssetBundleConfig.bytes";
+            string bytePath = "Assets/GameData/Data/AssetBundleConfig.bytes";
             FileStream bytefs = new FileStream(bytePath, FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite);
             BinaryFormatter bf = new BinaryFormatter();
             bf.Serialize(bytefs, assetBundleConfig);
