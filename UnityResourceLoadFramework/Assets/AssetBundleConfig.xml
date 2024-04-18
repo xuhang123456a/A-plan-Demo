@@ -1,15 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <AssetBundleConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <ABList Path="Assets/GameData/Prefabs/Attack.prefab" Crc="192126642" ABName="attack" AssetName="Attack.prefab">
-    <AbDependence>shader</AbDependence>
-  </ABList>
+  <ABList Path="Assets/GameData/Prefabs/Attack.prefab" Crc="192126642" ABName="attack" AssetName="Attack.prefab" />
+  <ABList Path="Assets/GameData/Shaders/benghuai.shader" Crc="2153760648" ABName="attack" AssetName="benghuai.shader" />
   <ABList Path="Assets/GameData/Prefabs/benghuai-body.prefab" Crc="566666748" ABName="benghuai-body" AssetName="benghuai-body.prefab">
-    <AbDependence>shader</AbDependence>
+    <AbDependence>attack</AbDependence>
   </ABList>
   <ABList Path="Assets/GameData/Prefabs/qq.prefab" Crc="3199553868" ABName="qq" AssetName="qq.prefab">
-    <AbDependence>shader</AbDependence>
+    <AbDependence>attack</AbDependence>
   </ABList>
-  <ABList Path="Assets/GameData/Shaders/benghuai.shader" Crc="2153760648" ABName="shader" AssetName="benghuai.shader" />
   <ABList Path="Assets/GameData/Shaders/cloud.shader" Crc="4156819275" ABName="shader" AssetName="cloud.shader" />
   <ABList Path="Assets/GameData/Shaders/Skybox.shader" Crc="2040549738" ABName="shader" AssetName="Skybox.shader" />
   <ABList Path="Assets/GameData/Shaders/Water.shader" Crc="3794094069" ABName="shader" AssetName="Water.shader" />

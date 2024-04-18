@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Other
 {
-    //[CreateAssetMenu(menuName = "CreateScriptableObject",fileName = "Hero",order = 10)]
+    [CreateAssetMenu(menuName = "CreateScriptableObject",fileName = "Hero",order = 10)]
     public class AssetSerialize : ScriptableObject
     {
         public int id;

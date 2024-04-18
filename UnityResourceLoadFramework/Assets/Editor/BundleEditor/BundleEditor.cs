@@ -38,7 +38,7 @@ namespace Editor.BundleEditor
             {
                 if (m_AllFileDir.ContainsKey(ab.ABName))
                 {
-                    Debug.LogError("AB配置错误，请检查！");
+                    Debug.LogError("AB包配置名字重复，请检查！");
                 }
                 else
                 {
@@ -78,7 +78,7 @@ namespace Editor.BundleEditor
 
                     if (m_AllPrefabDir.ContainsKey(obj.name))
                     {
-                        Debug.LogError("存在相同的prefab！名字：" + obj.name);
+                        Debug.LogError("存在相同名字的prefab！名字：" + obj.name);
                     }
                     else
                     {
@@ -106,7 +106,7 @@ namespace Editor.BundleEditor
                 AssetDatabase.RemoveAssetBundleName(allABNames[i], true);
                 EditorUtility.DisplayProgressBar("清除AB包名", "名字： " + allABNames[i], (float)i / allABNames.Length);
             }
-
+            
             AssetDatabase.Refresh();
             EditorUtility.ClearProgressBar();
             Debug.Log("打包完成");
